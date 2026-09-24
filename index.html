@@ -7,7 +7,7 @@
 <meta name="description" content="Annette Alejandre Espino — Especialista en Reconstrucción Directiva. Metodología 5C=R®, Sistema de Reconstrucción Directiva® e IRLR®.">
 <style>
 :root{--navy:#071b3a;--navy2:#0d2b50;--gold:#d5b15d;--gold2:#ead59a;--cream:#f5f1e7;--paper:#fbfaf7;--ink:#18232d;--muted:#5b666d;--green:#365444;--line:#d9d0bd}
-*{box-sizing:border-box}html{scroll-behavior:smooth}section[id]{scroll-margin-top:96px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}a{color:inherit}
+*{box-sizing:border-box}html{scroll-behavior:smooth}section[id]{scroll-margin-top:0}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}a{color:inherit}
 .wrap{width:min(1180px,calc(100% - 84px));margin:auto}
 .serif{font-family:Georgia,"Times New Roman",serif}.gold{color:var(--gold)}
 header{height:76px;background:var(--navy);color:#fff;border-bottom:1px solid rgba(213,177,93,.35);position:sticky;top:0;z-index:100}
@@ -293,10 +293,20 @@ footer{background:#04142d;color:#aeb7bf;padding:24px 0;font:10px Arial,sans-seri
   header nav{gap:6px 6px;}
   header nav a{font-size:10px;}
 }
-</style><style id="mobile-overflow-fix">
+</style><style id="desktop-anchor-fix-v23">
+/* V23: align desktop anchor destinations just below the 76px sticky header. */
+html{scroll-padding-top:76px;}
+section[id]{scroll-margin-top:0;}
 @media (max-width:900px){
-  html,body{max-width:100%;overflow-x:hidden;}
-  header,main,footer{max-width:100%;overflow-x:hidden;}
+  html{max-width:100%;overflow-x:clip;scroll-padding-top:132px;}
+  body{max-width:100%;overflow-x:clip;}
+  header{position:sticky;top:0;z-index:1000;}
+  header,main,footer{max-width:100%;}
+  section[id]{scroll-margin-top:0;}
+}
+@media (max-width:560px){
+  html{scroll-padding-top:126px;}
+  section[id]{scroll-margin-top:0;}
 }
 </style>
 </head>
