@@ -278,7 +278,28 @@ footer{background:#04142d;color:#aeb7bf;padding:24px 0;font:10px Arial,sans-seri
 .privacy-link{display:inline-block;color:#d8c28c;text-decoration:none;font:700 10px Arial,sans-serif;margin-top:22px;border-bottom:1px solid rgba(216,194,140,.45);padding-bottom:3px}
 @media(max-width:900px){.outcome-columns{grid-template-columns:1fr}.outcome-organizational{padding-left:0;border-left:0;border-top:1px solid var(--line)}.outcome-personal{padding-right:0}.brand{min-width:0}}
 @media(max-width:560px){.outcome-personal ul{grid-template-columns:1fr}.outcome-intro h2{font-size:36px}.brand-name{font-size:11px}.brand-category{font-size:7px}}
-</style></head>
+</style><style id="mobile-nav-fix">
+@media (max-width:900px){
+  header{height:auto;min-height:76px;}
+  header > .wrap{padding:14px 0 12px;}
+  header .brand{margin-bottom:12px;}
+  header nav{height:auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px 12px;align-items:center;justify-items:center;width:100%;}
+  header nav a{display:block;width:100%;text-align:center;font-size:11px;line-height:1.2;white-space:nowrap;padding:5px 0;}
+}
+@media (max-width:560px){
+  header > .wrap{width:calc(100% - 28px);}
+  header .brand-name{font-size:11px;letter-spacing:.12em;}
+  header .brand-category{font-size:7px;letter-spacing:.12em;}
+  header nav{gap:6px 6px;}
+  header nav a{font-size:10px;}
+}
+</style><style id="mobile-overflow-fix">
+@media (max-width:900px){
+  html,body{max-width:100%;overflow-x:hidden;}
+  header,main,footer{max-width:100%;overflow-x:hidden;}
+}
+</style>
+</head>
 <body>
 <header><div class="wrap"><div class="brand">
 <div class="brand-name">ANNETTE ALEJANDRE ESPINO</div>
